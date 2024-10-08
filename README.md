@@ -12,4 +12,4 @@ Tugas Web Portofolio
 
 - [x] Menerapkan Responsive Web Design.
 
-Preview Website : 
+Preview Website : https://aldoarnando.github.io/html-portofolio/
