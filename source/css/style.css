@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-foreground: #f9e9a8;
+    --input-box-color: #464c4f;
+    --active-color: #e5e469;
+    --secondary-foreground: #f9e9a8;
+    --primary-background: #2b2e30;
+    --header-background: #383d3f;
+    --border-color: #f9e9a8;
+    --text-color: #a69e93;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-foreground);
+}
+
+p {
+    color: var(--secondary-foreground);
+    margin-bottom: 1.5rem;
+    line-height: 1.6rem;
+}
+
+
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-background);
+    color: var(--primary-foreground);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    max-width: 1400px;
+    width: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--header-background);
+    z-index: 20;
+    padding: 0 40px;
+}
+
+header img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-foreground);
+    transition: 0.3s;
+    display: block;
+    height: 100%;
+    padding: 1.5rem 0;
+}
+
+.navbar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar button img {
+    width: 1.5rem;
+}
+
+
+main {
+    display: flex;
+    margin-top: 8rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+main article {
+    flex-grow: 1;
+}
+
+#home,
+#skills,
+#contact {
+    display: flex;
+    align-items: center;
+}
+
+#home .describe,
+#skills .skills-info,
+#contact .contact-info,
+#home .describe p {
+    padding-right: 3rem;
+    color: var(--text-color);
+}
+
+#home .describe h1 {
+    color: var(--primary-foreground);
+}
+
+#home .describe h2,
+#skills .skills-info h2,
+#contact .contact-info h2 {
+    color: var(--active-color);
+    margin: 10px 0;
+}
+
+#skills .skills-info li {
+    list-style: none;
+    margin: 8px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa-facebook, 
+.fa-linkedin, 
+.fa-instagram, 
+.fa-youtube {
+    color: var(--active-color);
+}
+aside {
+    padding-left: 7rem;
+}
+
+#profile {
+    width: 350px;
+    position: sticky;
+    top: 7rem;
+}
+
+#profile {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    font-size: 16px;
+    background-color: var(--input-box-color);
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: max-content;
+    background: var(--primary-background);
+    border: 1px solid var(--border-color);
+}
+
+#profile:hover {
+    background-color: var(--header-background);
+    transition: 0.5s ease-in-out;
+}
+
+#profile img {
+    width: 6.1rem;
+    height: 6.5rem;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 50%;
+}
+
+#profile h2 {
+    line-height: 0.5rem;
+    margin-top: 1rem;
+}
+
+#profile h3 {
+    font-size: 1.1rem;
+    color: var(--active-color);
+}
+
+#profile p {
+    color: var(--text-color);
+}
+
+footer {
+    margin-top: 5rem;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: var(--primary-background);
+        padding: 10px;
+    }
+
+    header {
+        padding-top: 1rem;
+        flex-direction: column;
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    #home .describe {
+        padding-right: 0;
+        text-align: justify;
+    }
+
+    #home .describe p {
+        padding: 0;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    main {
+        display: block;
+    }
+
+    #profile {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #container {
+    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside {
+        padding: 0 1rem;
+    }
+}
+
